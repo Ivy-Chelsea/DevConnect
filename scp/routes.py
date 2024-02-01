@@ -1,4 +1,4 @@
-from flask import render_template, url_for, redirect
+from flask import render_template, url_for, redirect, flash
 from scp import app, bcrypt
 from flask_login import current_user
 from scp.form import *
@@ -26,6 +26,7 @@ def signup():
         user = User(username=form.username.data, email = form.email.data, password = hashed_password)
         db.session.add(user)
         db.session.commit()
+        flash(f'Account created for {form.username.data}', 'success')
 
 
 
