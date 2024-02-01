@@ -28,6 +28,7 @@ def signup():
         db.session.commit()
         flash(f'Account created for {form.username.data}', 'success')
         return redirect(url_for('home'))
+    return render_template('signup.html', title='Signup', form=form)
 
 
 
