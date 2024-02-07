@@ -12,3 +12,54 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
+.header {
+    background-color: 9c7c38;
+    padding: 20px 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding 0 20px;
+}
+
+.h-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: white;
+}
