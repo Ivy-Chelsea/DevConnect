@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-    background-color: 9c7c38;
+    background-color: #9c7c38;
     padding: 20px 0;
 }
 
@@ -62,4 +62,28 @@ body {
 
 .nav ul li a:hover {
     color: white;
+}
+
+
+.features {
+    padding: 50px 0;
+    background-color: #eebc51;
+    text-align: centre;
+}
+
+.feature {
+    display: inline-block;
+    max-width: 300px;
+    margin 0 20px;
+    text- align: left;
+}
+
+.feature img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
