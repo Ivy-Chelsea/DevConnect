@@ -2,3 +2,13 @@ body, h1, h2, p, ul, li {
     margin:0;
     padding 0;
 }
+
+body {
+    font-family: Arial;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
