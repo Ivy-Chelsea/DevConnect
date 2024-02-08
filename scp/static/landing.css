@@ -154,6 +154,10 @@ body {
   color: white;
 }
 
+.fa-linkedin {
+    background: #0a66c2;
+    color: white;
+}
 
 .fa:hover {
   opacity: 0.7;
