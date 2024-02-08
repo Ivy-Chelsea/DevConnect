@@ -159,6 +159,10 @@ body {
     color: white;
 }
 
+.fa-envelope {
+    background: #0489c9;
+    color: white;
+}
 .fa:hover {
   opacity: 0.7;
 }
