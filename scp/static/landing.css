@@ -163,6 +163,17 @@ body {
     background: #0489c9;
     color: white;
 }
+
+.fa-whatsapp {
+    background: #075e54;
+    color: white;
+}
+
+.fa-github {
+    background: black;
+    color: white;
+}
+
 .fa:hover {
   opacity: 0.7;
 }
