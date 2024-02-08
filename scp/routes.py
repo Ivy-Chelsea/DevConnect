@@ -5,18 +5,18 @@ from scp.form import *
 from scp.models import *
 
 
-@app.route("/")
+@app.route("/landing")
 def landing():
     return render_template('landing.html', title='landing page')
 
 
-app.route("/home")
+@app.route("/home")
 def home():
     posts = Post.query.all()
     return render_template('home.html', posts=posts)
 
 
-app.route("/signup", methods=['GET', 'POST'])
+@app.route("/signup", methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
@@ -33,7 +33,7 @@ def signup():
     return render_template('signup.html', title='Signup', form=form)
 
 
-app.route("/login", methods=['GET', 'POST'])
+@app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
