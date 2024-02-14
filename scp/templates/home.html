@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <div class="navbar-nav">
+        <div class="nav">
               {% if current_user.is_authenticated %}
                 <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
                 <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
