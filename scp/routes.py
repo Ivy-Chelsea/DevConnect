@@ -1,4 +1,4 @@
-from flask import render_template, url_for, redirect, flash
+from flask import render_template, url_for, redirect, flash, request
 from scp import app, bcrypt
 from flask_login import current_user, login_user
 from scp.form import *
