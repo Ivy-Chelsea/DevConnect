@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, flash
 from scp import app, bcrypt
-from flask_login import current_user
+from flask_login import current_user, login_user
 from scp.form import *
 from scp.models import *
 
