@@ -1,5 +1,6 @@
-{% extends "home.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+
 <div class="h-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
@@ -69,7 +70,8 @@
 </div>
 <div class="border-top pt-3">
     <small class="text-muted">
-        Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">SIGN IN</a>
+        Already Have An Account?
     </small>
 </div>
 {% endblock content %}
+</html>
