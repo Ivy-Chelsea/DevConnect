@@ -4,7 +4,6 @@
     <div class="content">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
-            <fieldset class="field">
                 <legend class="border-bottom mb-4">Log In</legend>
                 <div class="field">
                     {{ form.email.label(class="label") }}
@@ -36,7 +35,6 @@
                     {{ form.remember(class="form-check-input") }}
                     {{ form.remember.label(class="form-check-label") }}
                 </div>
-            </fieldset>
             <div class="form-group">
                 {{ form.submit(class="btn") }}
             </div>
