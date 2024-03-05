@@ -18,13 +18,17 @@
             text-align: center;
             border-radius: 5px;
         }
+
+        .head {
+            display: flex;
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
-                <legend class="border-bottom mb-4">Log In</legend>
+                <legend class="head">Log In</legend>
                 <div class="field">
                     {{ form.email.label(class="label") }}
                     {% if form.email.errors %}
