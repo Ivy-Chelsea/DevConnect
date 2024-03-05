@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body{
+        background-color: #008080;
+        display: flex;
+        align-items: center;
+        justify content: centre;
+        height: 80vh;
+        }
+    </style>
+</head>
 <body>
     <div class="content">
         <form method="POST" action="">
@@ -45,7 +56,7 @@
     </div>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Need An Account? <a class="link" href="{{ url_for('register') }}">Sign Up Now</a>
+            Need An Account? <a class="link" href="{{ url_for('signup') }}">Sign Up Now</a>
         </small>
     </div>
 </body>
