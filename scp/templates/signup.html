@@ -13,8 +13,6 @@
     </div>
     <form method="POST" action="">
         {{ form.hidden_tag() }}
-        <fieldset class="f-group">
-            <legend class="head"></legend>
             <div class="form-group">
                 {{ form.username.label(class="label") }}
 
@@ -71,7 +69,6 @@
                     {{ form.confirm_password(class="input") }}
                 {% endif %}
             </div>
-        </fieldset>
         <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info" ) }}
         </div>
