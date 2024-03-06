@@ -50,6 +50,7 @@ def login():
             flash('Login unsucessful. Kindly check email and password')
     return render_template('login.html', title='Login', form=form)
 
+
 @app.route("/logout")
 def logout():
     logout_user()
