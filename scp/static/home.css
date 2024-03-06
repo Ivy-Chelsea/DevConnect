@@ -36,3 +36,14 @@ nav-link:hover {
   overflow: auto;
   top: 100px;
 }
+
+.sidebar a {
+  display: block;
+  color: #008080;
+  padding: 16px;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #04AA6D;
+  color: white;
+}
