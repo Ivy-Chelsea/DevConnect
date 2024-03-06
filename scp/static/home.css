@@ -16,3 +16,8 @@ header {
     z-index: 1000;
     display: flex;
 }
+
+.nav-link {
+  color: #cbd5db;
+  display: flex;
+}
