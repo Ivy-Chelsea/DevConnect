@@ -93,7 +93,7 @@
                 <div class="field">
                     {{ form.password.label(class="label") }}
                     {% if form.password.errors %}
-                        {{ form.password(class="ivalid") }}
+                        {{ form.password(class="invalid") }}
                         <div class="invalid-feedback">
                             {% for error in form.password.errors %}
                                 <span>{{ error }}</span>
