@@ -21,3 +21,8 @@ header {
   color: #cbd5db;
   display: flex;
 }
+
+nav-link:hover {
+  color: #ffffff;
+}
+
