@@ -72,3 +72,11 @@ nav-link:hover {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
+
+.fieldset {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    margin-left: 600px;
+    margin-top: 200px;
+}
