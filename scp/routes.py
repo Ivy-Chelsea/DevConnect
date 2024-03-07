@@ -64,3 +64,5 @@ def new_post():
         post = Post(title=form.title.data, content=form.content.data, user_id=current_user.id)
         db.session.add(post)
         db.session.commit()
+        flash('Post created successfully', 'success')
+        return redirect(url_for('home'))
