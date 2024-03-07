@@ -1,3 +1,22 @@
 {% extends "home.html" %}
 {% block content %}
+<div class="c-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="fieldset">
+            <legend class="border">New Post</legend>
+            <div class="content">
+                {{ form.title.label(class="label") }}
+                {% if form.title.errors %}
+                    {{ form.title(class="invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.title.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.title(class="input") }}
+                {% endif %}
+            </div>
+        </fieldset>
 {% endblock content %}
