@@ -21,7 +21,7 @@
               {% endif %}
     </header>
 
-
+    {% block content %}
     {% for post in post %}
         <article class="media content-section">
           <div class="media-body">
@@ -34,6 +34,8 @@
           </div>
         </article>
     {% endfor %}
+    {% endblock %}
+
     <div class="sidebar">
         <a class="s-link" href="{{ url_for('home') }}">Home</a>
         <a class="s-link" href="{{ url_for('home') }}">Helpful links</a>
