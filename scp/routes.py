@@ -58,3 +58,8 @@ def logout():
 
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
+def new_post():
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(title=form.title.data, content=form.content.data, user_id=current_user.id)
+        db.session.add(post)
