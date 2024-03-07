@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, flash, request
 from scp import app, bcrypt
-from flask_login import current_user, login_user, logout_user
+from flask_login import current_user, login_user, logout_user, login_required
 from scp.form import *
 from scp.models import *
 
@@ -10,7 +10,7 @@ def landing():
     return render_template('landing.html', title='landing page')
 
 
-@app.route("/home")
+@app.route("/home", methods=['GET'])
 def home():
     posts = Post.query.all()
     return render_template('home.html', posts=posts)
@@ -54,4 +54,6 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    return redirect(url_for('landing'))
+
+
