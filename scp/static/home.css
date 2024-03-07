@@ -56,3 +56,19 @@ nav-link:hover {
   border-radius: 3px;
   margin-bottom: 20px;
 }
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    padding: 10px;
+    align: center;
+}
+
+.input {
+    width: 50%;
+    padding: 10px 20px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
