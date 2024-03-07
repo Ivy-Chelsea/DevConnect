@@ -56,4 +56,5 @@ def logout():
     logout_user()
     return redirect(url_for('landing'))
 
-
+@app.route("/post/new", methods=['GET', 'POST'])
+@login_required
