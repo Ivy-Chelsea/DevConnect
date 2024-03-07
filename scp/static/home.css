@@ -90,3 +90,8 @@ nav-link:hover {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.btn:hover {
+    opacity: 0.7;
+}
+
