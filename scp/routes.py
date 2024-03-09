@@ -72,3 +72,4 @@ def new_post():
 
 
 @app.route("/post")
+@login_required
