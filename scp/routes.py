@@ -73,3 +73,5 @@ def new_post():
 
 @app.route("/post")
 @login_required
+def post(post_id):
+    post = Post.query.get_or_404(post_id)
