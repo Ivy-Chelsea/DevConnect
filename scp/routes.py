@@ -76,3 +76,6 @@ def new_post():
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template("post.html", title=post, post=post)
+
+
+@app.route("/post/<int:post_id>/delete", methods=['POST'])
