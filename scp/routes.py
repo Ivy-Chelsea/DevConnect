@@ -79,3 +79,4 @@ def post(post_id):
 
 
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
+@login_required
