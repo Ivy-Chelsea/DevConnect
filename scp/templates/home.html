@@ -3,6 +3,8 @@
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     {% if title %}
         <title>Devconnect - {{ title }}</title>
     {% else %}
@@ -22,11 +24,11 @@
     </header>
 
     {% block content %}
-    {% for post in post %}
-        <article class="media content-section">
+    {% for post in posts %}
+        <article class="media">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.author.username }}</a>
+              <a class="mr-2" href="#">{{ post.username }}</a>
               <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
             <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
