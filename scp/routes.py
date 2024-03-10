@@ -85,3 +85,4 @@ def delete_post(post_id):
     if not current_user:
         abort(403)
     db.session.delete(post)
+    db.session.commit()
