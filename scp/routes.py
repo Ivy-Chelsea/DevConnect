@@ -71,7 +71,7 @@ def new_post():
                            form=form, legend='New Post')
 
 
-@app.route("/post")
+@app.route("/post/<int:post_id>")
 @login_required
 def post(post_id):
     post = Post.query.get_or_404(post_id)
