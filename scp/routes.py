@@ -80,3 +80,5 @@ def post(post_id):
 
 @app.route("/post/<int:post_id>/delete", methods=['POST'])
 @login_required
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
