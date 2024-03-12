@@ -88,3 +88,7 @@ def delete_post(post_id):
     db.session.commit()
     flash('Post deleted successfully')
     return redirect(url_for('home'))
+
+
+@app.route("/profile", methods=['GET', 'POST'])
+
