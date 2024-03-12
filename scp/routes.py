@@ -91,4 +91,8 @@ def delete_post(post_id):
 
 
 @app.route("/profile", methods=['GET', 'POST'])
+def profile():
+    form = UpdateProfileForm()
+    return render_template('profile.html', form=form)
+
 
