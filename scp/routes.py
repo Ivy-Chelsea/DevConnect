@@ -99,3 +99,4 @@ def profile():
             current_user.image = picture
         current_user.username = form.username.data
         current_user.email = form.email.data
+        flash('Profile updated successfully')
