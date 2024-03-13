@@ -1,0 +1,15 @@
+{% extends "home.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">{{ task.due_date.strftime('%Y-%m-%d') }}</small>
+              <small class="text-muted">{{ task.priority }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ task.title }}</a></h2>
+            <p class="article-content">{{ task.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock %}
