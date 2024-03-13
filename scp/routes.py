@@ -103,6 +103,9 @@ def update_post(post_id):
         db.session.commit()
         flash('Post updated successfully', 'success')
         return redirect(url_for('post', post_id=post.id))
+    elif request.method == 'GET':
+        form.title.data = post.title
+        form.content.data = post.content
 
 
 @app.route("/profile", methods=['GET', 'POST'])
