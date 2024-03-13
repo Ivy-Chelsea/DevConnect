@@ -27,3 +27,15 @@ class Post(db.Model):
         return f"Post('{self.title}', '{self.date_posted}'"
 
 
+class Task(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String(500))
+    due_date = db.Column(db.Date, nullable=False)
+    start_time = db.Column(db.Time, nullable=False)
+    end_time = db.Column(db.Time, nullable=False)
+    reminder_date = db.Column(db.Date)
+    priority = db.Column(db.String(10), nullable=False)
+    labels = db.Column(db.String(100))
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+
