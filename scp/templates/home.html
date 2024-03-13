@@ -15,6 +15,7 @@
     <header class="header">
               {% if current_user.is_authenticated %}
                 <a class="nav-link" href="{{ url_for('new_post') }}">New Post</a>
+                <a class="nav-link" href="{{ url_for('tasks') }}">Create task</a>
                 <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
                 <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
               {% else %}
