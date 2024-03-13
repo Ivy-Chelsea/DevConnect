@@ -96,6 +96,10 @@ def update_post(post_id):
     post = Post.query.get_or_404(post_id)
     if not current_user:
         abort(403)
+    form = PostForm()
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.content = form.content.data
 
 
 @app.route("/profile", methods=['GET', 'POST'])
