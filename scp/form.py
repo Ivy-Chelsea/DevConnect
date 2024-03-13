@@ -47,3 +47,15 @@ class UpdateProfileForm(FlaskForm):
                         validators=[DataRequired(), Email()])
     picture = FileField('Update Profile Picture', validators=[FileAllowed('jpg', 'png')])
     submit = SubmitField('Update')
+
+
+class TaskForm(FlaskForm):
+    title = StringField('title',
+                        validators=[DataRequired(), Length(min=3, max=20)])
+    description = TextAreaField('description', validators=[DataRequired()])
+    due_date = TextAreaField('due_date', validators=[DataRequired()])
+    start = TextAreaField('start', validators=[DataRequired()])
+    end = TextAreaField('end', validators=[DataRequired()])
+    reminder_date = TextAreaField('reminder_date', validators=[DataRequired()])
+    priority = TextAreaField('priority', validators=[DataRequired()])
+    submit = SubmitField('create')
