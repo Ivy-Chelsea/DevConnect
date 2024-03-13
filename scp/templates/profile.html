@@ -2,7 +2,11 @@
 {% block content %}
 <div class="c-section">
     <div class="media">
-    <img class="rounded-circle account-img" src="{{ image }}">
+    {% if current_user.image %}
+        <img class="rounded-circle account-img" src="{{ url_for('static', filename='images/' + current_user.image) }}">
+    {% else %}
+        <img class="rounded-circle account-img" src="{{ url_for('static', filename='images/profile.jpg') }}">
+    {% endif %}
     <div class="media-body">
         <h2>{{ current_user.username }}</h2>
         <p class="text-secondary">{{ current_user.email }}</p>
