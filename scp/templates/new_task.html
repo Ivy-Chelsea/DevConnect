@@ -1,6 +1,42 @@
 {% extends  "home.html" %}
 {% block content %}
 <div class="task-body">
-
+  <h2>Create a new task</h2>
+  <form method="POST" action="{{ url_for('tasks') }}">
+      <label>{{ form.title.label }}</label><br>
+      <input type="text" id="title" name="title" required>
+      <br><br>
+      <label>{{ form.description.label }}</label><br>
+      <textarea id="taskDescription" name="taskDescription"></textarea>
+      <br><br>
+      <label>{{ form.due_date.label }}</label><br>
+      <input type="date" id="taskDueDate" name="taskDueDate" required>
+      <br><br>
+      <label>{{ form.start.label }}</label><br>
+      <input type="time" id="taskStartTime" name="taskStartTime" required>
+      <input type="radio" id="start-am" name="start-am-pm" value="am" checked>
+      <label for="start-am">AM</label>
+      <input type="radio" id="start-pm" name="start-am-pm" value="pm">
+      <label for="start-pm">PM</label>
+      <br><br>
+      <label>{{ form.end.label }}</label><br>
+      <input type="time" id="taskEndTime" name="taskEndTime" required>
+      <input type="radio" id="end-am" name="end-am-pm" value="am" checked>
+      <label for="end-am">AM</label>
+      <input type="radio" id="end-pm" name="end-am-pm" value="pm">
+      <label for="end-pm">PM</label>
+      <br><br>
+      <label>{{ form.reminder_date.label }}</label><br>
+      <input type="date" id="taskReminderDate" name="taskReminderDate">
+      <br><br>
+      <label>{{ form.priority.label }}</label><br>
+      <select id="taskPriority" name="taskPriority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <br><br>
+      <button type="submit">{{ form.submit }} </button>
+  </form>
 </div>
 {% endblock content %}
