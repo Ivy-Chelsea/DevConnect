@@ -92,6 +92,9 @@ def delete_post(post_id):
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required
+def update_post(post_id):
+    post = Post.query.get_or_404(post_id)
+
 
 
 @app.route("/profile", methods=['GET', 'POST'])
