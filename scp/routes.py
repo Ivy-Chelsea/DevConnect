@@ -100,6 +100,7 @@ def update_post(post_id):
     if form.validate_on_submit():
         post.title = form.title.data
         post.content = form.content.data
+        db.session.commit()
 
 
 @app.route("/profile", methods=['GET', 'POST'])
