@@ -93,6 +93,9 @@ def delete_post(post_id):
 @app.route("/profile", methods=['GET', 'POST'])
 def profile():
     form = UpdateProfileForm()
-    return render_template('profile.html', form=form)
-
-
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture = form.picture.data
+            current_user.image = picture
+        current_user.username = form.username.data
+        current_user.email = form.email.data
