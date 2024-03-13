@@ -90,6 +90,10 @@ def delete_post(post_id):
     return redirect(url_for('home'))
 
 
+@app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
+@login_required
+
+
 @app.route("/profile", methods=['GET', 'POST'])
 def profile():
     form = UpdateProfileForm()
