@@ -100,3 +100,7 @@ def profile():
         current_user.username = form.username.data
         current_user.email = form.email.data
         flash('Profile updated successfully')
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+
