@@ -10,12 +10,6 @@ def landing():
     return render_template('landing.html', title='landing page')
 
 
-@app.route("/home", methods=['GET'])
-def home():
-    posts = Post.query.all()
-    return render_template('home.html', posts=posts)
-
-
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
@@ -55,6 +49,30 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+
+@app.route("/profile", methods=['GET', 'POST'])
+def profile():
+    form = UpdateProfileForm()
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture = form.picture.data
+            current_user.image = picture
+        current_user.username = form.username.data
+        current_user.email = form.email.data
+        flash('Profile updated successfully')
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+    image = url_for('static', filename='' + current_user.image)
+    return render_template('profile.html',
+                           form=form, image=image, title='Profile')
+
+
+@app.route("/home", methods=['GET'])
+def home():
+    posts = Post.query.all()
+    return render_template('home.html', posts=posts)
 
 
 @app.route("/post/new", methods=['GET', 'POST'])
@@ -108,21 +126,3 @@ def update_post(post_id):
         form.content.data = post.content
     return render_template('create_post.html', title='Update Post',
                            form=form)
-
-
-@app.route("/profile", methods=['GET', 'POST'])
-def profile():
-    form = UpdateProfileForm()
-    if form.validate_on_submit():
-        if form.picture.data:
-            picture = form.picture.data
-            current_user.image = picture
-        current_user.username = form.username.data
-        current_user.email = form.email.data
-        flash('Profile updated successfully')
-    elif request.method == 'GET':
-        form.username.data = current_user.username
-        form.email.data = current_user.email
-    image = url_for('static', filename='' + current_user.image)
-    return render_template('profile.html',
-                           form=form, image=image, title='Profile')
