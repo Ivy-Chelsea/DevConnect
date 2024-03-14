@@ -138,4 +138,5 @@ def new_task():
         db.session.commit()
         flash('Task created successfully', 'success')
         return redirect(url_for('home'))
-
+    return render_template('new_task.html', title='New Task',
+                           form=form)
