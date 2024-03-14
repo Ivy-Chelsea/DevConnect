@@ -135,4 +135,5 @@ def new_task():
     if form.validate_on_submit():
         task = Task(title=form.title.data, description=form.description.data, user_id=current_user.id)
         db.session.add(task)
+        db.session.commit()
 
