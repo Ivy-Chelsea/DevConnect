@@ -126,3 +126,7 @@ def update_post(post_id):
         form.content.data = post.content
     return render_template('create_post.html', title='Update Post',
                            form=form)
+
+
+@app.route("/task/new", methods=['GET', 'POST'])
+@login_required
