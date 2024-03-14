@@ -137,3 +137,5 @@ def new_task():
         db.session.add(task)
         db.session.commit()
         flash('Task created successfully', 'success')
+        return redirect(url_for('home'))
+
