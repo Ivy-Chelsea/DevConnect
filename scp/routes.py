@@ -140,3 +140,8 @@ def new_task():
         return redirect(url_for('home'))
     return render_template('new_task.html', title='New Task',
                            form=form)
+
+@app.route("/tasks", methods=['GET', 'POST'])
+def tasks():
+    tasks = Task.query.all()
+    return render_template('tasks.html', tasks=tasks)
