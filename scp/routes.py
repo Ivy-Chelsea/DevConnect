@@ -132,4 +132,6 @@ def update_post(post_id):
 @login_required
 def new_task():
     form = TaskForm()
+    if form.validate_on_submit():
+        task = Task(title=form.title.data, description=form.description.data, user_id=current_user.id)
 
