@@ -136,4 +136,4 @@ def new_task():
         task = Task(title=form.title.data, description=form.description.data, user_id=current_user.id)
         db.session.add(task)
         db.session.commit()
-
+        flash('Task created successfully', 'success')
