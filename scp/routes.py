@@ -130,3 +130,6 @@ def update_post(post_id):
 
 @app.route("/task/new", methods=['GET', 'POST'])
 @login_required
+def new_task():
+    form = TaskForm()
+
