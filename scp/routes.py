@@ -141,6 +141,7 @@ def new_task():
     return render_template('new_task.html', title='New Task',
                            form=form)
 
+
 @app.route("/tasks", methods=['GET', 'POST'])
 def tasks():
     tasks = Task.query.all()
