@@ -118,3 +118,7 @@ a.article-title:hover {
     background-color: #00ffff;
     width: 50%;
 }
+
+.form-group {
+    margin-left: 300px;
+}
