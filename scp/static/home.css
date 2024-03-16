@@ -98,3 +98,7 @@ nav-link:hover {
 .border {
     width: 50%;
 }
+
+.article-title {
+  color: #444444;
+}
