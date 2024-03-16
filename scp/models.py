@@ -36,6 +36,5 @@ class Task(db.Model):
     end_time = db.Column(db.Time, nullable=False)
     reminder_date = db.Column(db.Date)
     priority = db.Column(db.String(10), nullable=False)
-    labels = db.Column(db.String(100))
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
