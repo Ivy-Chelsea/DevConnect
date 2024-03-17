@@ -59,3 +59,12 @@ class TaskForm(FlaskForm):
     reminder_date = TextAreaField('reminder_date', validators=[DataRequired()])
     priority = TextAreaField('priority', validators=[DataRequired()])
     submit = SubmitField('create')
+
+
+class ChatForm(FlaskForm):
+    username = StringField('Username',
+                           validators=[DataRequired(), Length(min=3, max=20)])
+    code = StringField('code',
+                        validators=[DataRequired(), Length(min=3, max=10)])
+    join = SubmitField('join', False)
+    create = SubmitField('create', False)
