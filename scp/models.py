@@ -38,3 +38,8 @@ class Task(db.Model):
     priority = db.Column(db.String(10), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
+
+class Chat(db.Model):
+    code = db.Column(db.String(6), primary_key=True)
+    username = db.Column(db.String(20), db.ForeignKey("user.username"), nullable=False)
+
