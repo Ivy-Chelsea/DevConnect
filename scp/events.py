@@ -18,3 +18,8 @@ def handle_connect():
         "message": f"{name} has entered the chat"
     }, to=room)
     rooms[room]["members"] += 1
+
+
+@socketio.on('message')
+def handle_message(payload):
+
