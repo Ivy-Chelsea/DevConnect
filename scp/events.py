@@ -8,3 +8,5 @@ def handle_connect():
     room = session.get('room')
     if name is None or room is None:
         return
+    if room not in rooms:
+        leave_room(room)
