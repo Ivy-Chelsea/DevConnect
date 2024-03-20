@@ -8,4 +8,3 @@ def generate_room_code(length: int, existing_code):
         code = ''.join(code_chars)
         if code not in existing_code:
             return code
-
