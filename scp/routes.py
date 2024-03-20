@@ -146,3 +146,9 @@ def new_task():
 def tasks():
     tasks = Task.query.all()
     return render_template('tasks.html', tasks=tasks)
+
+
+@app.route('/chat', methods=["GET", "POST"])
+def chat():
+
+
