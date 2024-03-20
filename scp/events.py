@@ -22,4 +22,6 @@ def handle_connect():
 
 @socketio.on('message')
 def handle_message(payload):
+    room = session.get('room')
+    name = session.get('name')
 
