@@ -155,4 +155,7 @@ def chat():
         create = request.form.get('create', False)
         code = request.form.get('code')
         join = request.form.get('join', False)
+        if not name:
+            return render_template('chat.html')
+
 
