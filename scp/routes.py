@@ -169,5 +169,6 @@ def chat():
                 return render_template('chat.html')
             if code not in rooms:
                 return render_template('chat.html')
+            room_code = code
 
 
