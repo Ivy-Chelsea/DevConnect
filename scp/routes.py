@@ -150,5 +150,9 @@ def tasks():
 
 @app.route('/chat', methods=["GET", "POST"])
 def chat():
-
+    if request.method == "POST":
+        name = request.form.get('name')
+        create = request.form.get('create', False)
+        code = request.form.get('code')
+        join = request.form.get('join', False)
 
