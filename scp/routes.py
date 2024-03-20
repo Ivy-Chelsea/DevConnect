@@ -181,4 +181,6 @@ def chat():
 def room():
     room = session.get('room')
     name = session.get('name')
+    if name is None or room is None or room not in rooms:
+        return redirect(url_for('chat'))
 
