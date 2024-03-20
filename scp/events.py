@@ -1,5 +1,7 @@
 from scp import socketio
 from flask import session
+
+
 @socketio.on('connect')
 def handle_connect():
     name = session.get('name')
