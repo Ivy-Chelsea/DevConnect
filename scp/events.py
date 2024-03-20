@@ -38,4 +38,7 @@ def handle_message(payload):
 def handle_disconnect():
     room = session.get("room")
     name = session.get("name")
+    leave_room(room)
+    if room in rooms:
+        rooms[room]["members"] -= 1
 
