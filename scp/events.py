@@ -24,4 +24,6 @@ def handle_connect():
 def handle_message(payload):
     room = session.get('room')
     name = session.get('name')
+    if room not in rooms:
+        return
 
