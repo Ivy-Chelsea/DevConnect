@@ -12,3 +12,4 @@ def handle_connect():
         return
     if room not in rooms:
         leave_room(room)
+    join_room(room)
