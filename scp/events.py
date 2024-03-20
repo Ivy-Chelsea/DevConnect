@@ -30,3 +30,5 @@ def handle_message(payload):
         "sender": name,
         "message": payload["message"]
     }
+    send(message, to=room)
+
