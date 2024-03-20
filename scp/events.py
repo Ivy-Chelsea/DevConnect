@@ -32,3 +32,10 @@ def handle_message(payload):
     }
     send(message, to=room)
     rooms[room]["messages"].append(message)
+
+
+@socketio.on('disconnect')
+def handle_disconnect():
+    room = session.get("room")
+    name = session.get("name")
+
