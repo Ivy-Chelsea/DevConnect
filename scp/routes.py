@@ -170,5 +170,8 @@ def chat():
             if code not in rooms:
                 return render_template('chat.html')
             room_code = code
+        session['room'] = room_code
+        session['name'] = name
+        return redirect(url_for('room'))
 
 
