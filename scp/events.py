@@ -13,3 +13,7 @@ def handle_connect():
     if room not in rooms:
         leave_room(room)
     join_room(room)
+    send({
+        "sender": "",
+        "message": f"{name} has entered the chat"
+    }, to=room)
