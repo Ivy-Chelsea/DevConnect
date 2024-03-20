@@ -157,5 +157,11 @@ def chat():
         join = request.form.get('join', False)
         if not name:
             return render_template('chat.html')
-
+        if create != False:
+            room_code = generate_room_code(6, list(rooms.keys()))
+            new_room = {
+                'members': 0,
+                'messages': []
+            }
+            rooms[room_code] = new_room
 
