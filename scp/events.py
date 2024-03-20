@@ -43,4 +43,7 @@ def handle_disconnect():
         rooms[room]["members"] -= 1
         if rooms[room]["members"] <= 0:
             del rooms[room]
-
+        send({
+        "message": f"{name} has left the chat",
+        "sender": ""
+    }, to=room)
