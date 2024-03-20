@@ -173,5 +173,6 @@ def chat():
         session['room'] = room_code
         session['name'] = name
         return redirect(url_for('room'))
-
+    else:
+        return render_template('chat.html', title='chat room')
 
