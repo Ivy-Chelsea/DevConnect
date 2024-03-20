@@ -1,6 +1,6 @@
 from scp import socketio
 from flask import session
-from flask_socketio import leave_room
+from flask_socketio import leave_room, join_room
 from scp.data import rooms
 
 
