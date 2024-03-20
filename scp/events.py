@@ -31,4 +31,4 @@ def handle_message(payload):
         "message": payload["message"]
     }
     send(message, to=room)
-
+    rooms[room]["messages"].append(message)
