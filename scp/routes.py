@@ -164,4 +164,10 @@ def chat():
                 'messages': []
             }
             rooms[room_code] = new_room
+        if join != False:
+            if not code:
+                return render_template('chat.html')
+            if code not in rooms:
+                return render_template('chat.html')
+
 
