@@ -4,6 +4,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from scp.form import *
 from scp.models import *
 from scp.events import *
+from scp.gen import generate_room_code
 
 
 @app.route("/landing")
