@@ -26,4 +26,7 @@ def handle_message(payload):
     name = session.get('name')
     if room not in rooms:
         return
-
+    message = {
+        "sender": name,
+        "message": payload["message"]
+    }
