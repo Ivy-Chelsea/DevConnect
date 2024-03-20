@@ -17,3 +17,4 @@ def handle_connect():
         "sender": "",
         "message": f"{name} has entered the chat"
     }, to=room)
+    rooms[room]["members"] += 1
