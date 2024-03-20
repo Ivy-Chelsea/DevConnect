@@ -183,4 +183,5 @@ def room():
     name = session.get('name')
     if name is None or room is None or room not in rooms:
         return redirect(url_for('chat'))
-
+    messages = rooms[room]['messages']
+    return render_template('room.html', room=room, user=name, messages=messages)
