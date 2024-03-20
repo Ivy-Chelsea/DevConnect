@@ -176,3 +176,6 @@ def chat():
     else:
         return render_template('chat.html', title='chat room')
 
+
+@app.route('/room')
+def room():
