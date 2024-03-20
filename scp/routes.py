@@ -179,3 +179,6 @@ def chat():
 
 @app.route('/room')
 def room():
+    room = session.get('room')
+    name = session.get('name')
+
