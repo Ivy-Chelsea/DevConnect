@@ -187,3 +187,8 @@ def room():
         return redirect(url_for('chat'))
     messages = rooms[room]['messages']
     return render_template('room.html', room=room, user=name, messages=messages)
+
+
+@app.route('/links')
+def links():
+    return render_template('links.html', title='helpful links')
