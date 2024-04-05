@@ -68,3 +68,9 @@ class ChatForm(FlaskForm):
                         validators=[DataRequired(), Length(min=3, max=10)])
     join = SubmitField('join', False)
     create = SubmitField('create', False)
+
+
+class RequestResetForm(FlaskForm):
+    email = StringField('email',
+                        validators=[DataRequired(), Email()])
+    submit = SubmitField('Request Password Reset')
