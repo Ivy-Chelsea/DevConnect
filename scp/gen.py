@@ -2,7 +2,7 @@ import random
 from string import ascii_letters
 from scp import mail
 from flask_mail import Message
-
+from flask import url_for
 
 
 def generate_room_code(length: int, existing_code):
