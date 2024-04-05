@@ -1,6 +1,7 @@
 import random
 from string import ascii_letters
 from scp import mail
+from flask_mail import Message
 
 
 
