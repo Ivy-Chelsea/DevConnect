@@ -1,5 +1,7 @@
 import random
 from string import ascii_letters
+from scp import mail
+
 
 
 def generate_room_code(length: int, existing_code):
