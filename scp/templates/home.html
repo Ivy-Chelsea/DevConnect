@@ -31,10 +31,10 @@
         <article class="media">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ post.username }}</a>
+              <a class="mr-2" href="#">{{ current_user.username }}</a>
               <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
-            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
         </article>
@@ -46,6 +46,7 @@
         <a class="s-link" href="https://techcrunch.com/category/startups/">Latest Tech Updates</a>
         <a class="s-link" href="{{ url_for('tasks') }}">My Tasks</a>
         <a class="s-link" href="{{ url_for('links') }}">Helpful links</a>
+        <a class="s-link" href="https://codepen.io/">Coding Environmentc</a>
     </div>
 
 </body>
