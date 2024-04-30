@@ -4,7 +4,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from scp.form import *
 from scp.models import *
 from scp.events import *
-from scp.gen import generate_room_code
+from scp.gen import generate_room_code, reset_email
 
 
 @app.route("/landing")
@@ -41,7 +41,7 @@ def login():
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
-            return redirect('next_page') if next_page else redirect(url_for('home'))
+            return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash('Login unsucessful. Kindly check email and password')
     return render_template('login.html', title='Login', form=form)
@@ -94,11 +94,13 @@ def new_post():
 @app.route("/post/<int:post_id>")
 @login_required
 def post(post_id):
-    post = Post.query.get_or_404(post_id)
-    return render_template("post.html", title=post, post=post)
+    post = Post.query.filter_by(id=post_id, user_id=current_user.id).first()
+    if not current_user:
+        abort(403)
+    return render_template("post.html", title=post, post=post, post_id=post_id)
 
 
-@app.route("/post/<int:post_id>/delete", methods=['POST'])
+@app.route("/post/<int:post_id>/delete", methods=['POST', 'GET'])
 @login_required
 def delete_post(post_id):
     post = Post.query.get_or_404(post_id)
@@ -192,3 +194,4 @@ def room():
 @app.route('/links')
 def links():
     return render_template('links.html', title='helpful links')
+
