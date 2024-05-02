@@ -89,14 +89,14 @@ body {
 .features {
     background-color: #53B0AE;
     text-align: centre;
-    padding: 0 20px;
-    justify-content: space-between;
+    height: 800px;
 }
 
 .feature {
+    max-width: 600px;
     display: inline-block;
-    max-width: 300px;
-    text- align: left;
+    margin: 0 20px;
+    text-align: left;
 }
 
 .feature img {
@@ -105,11 +105,21 @@ body {
     margin-bottom: 20px;
 }
 
+.features .row {
+    margin-bottom: 30px;
+    padding-left: 200px;
+}
+
 .feature h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+.features h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 .contact {
   padding: 80px 0;
