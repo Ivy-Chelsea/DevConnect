@@ -16,7 +16,7 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#intro">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                     <li><a href="{{ url_for('signup') }}">Register</a></li>
@@ -33,7 +33,7 @@
           <h1>About the Portal</h1>
           <p>Welcome to our Student Collaboration Portal! Designed for computing students, our platform is a hub for collaboration,
               learning, and networking within computer science and related fields.</p>
-          <a href="#features" class="cta-button">Get Started</a>
+          <a href="{{ url_for('signup') }}" class="cta-button">Get Started</a>
         </div>
     </section>
     <section id="features" class="features">
